@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --page-1-color:#98ddca;
+    --page-2-color:#ffd3b4;
+    --page-3-color:#ffaaa7;
+    --page-4-color:#d5ecc2;
+    --animate-speed : 2s;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: #1b2021;
+    font-family: 'Poppins', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+#page-1{background: var(--page-1-color);}
+#page-2{background: var(--page-2-color);}
+#page-3{background: var(--page-3-color);}
+#page-4{background: var(--page-4-color);}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 4rem;
+}
+
+.page h1{
+    font-size: 4rem;
+    line-height: 1.2;
+}
+.page p{
+    font-size: 1.2rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: .75rem .75rem;
+    border-radius: 5px;
+    margin: 0 .5rem;
+    transition: all .3s ease-in;
+    text-decoration: none;
+}
+
+.btn-light:hover, .btn-dark{
+    background: #1b2021;
+    color: #ffffff;
+}
+
+.btn-light, .btn-dark:hover{
+    color: #1b2021;
+    background: #ffffff;
+}
+
+#page-1 h1{
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p{
+    transform: translateX(-1800px);
+    animation: content_animate var(--animate-speed) 1s forwards ease-in;
+}
+/* Keyframes */
+@keyframes heading{
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes content_animate{
+    to{
+        transform: translateX(0);
+    }
+}
